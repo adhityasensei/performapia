@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // Should be ESNext for Vue 3
+    "module": "ESNext", // Should be ESNext for Vue 3
+    "jsx": "preserve", // Ensure JSX is preserved
+    "moduleResolution": "node", // Use Node.js module resolution for Vue 3
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["src/*"],
+      "@build/*": ["build/*"]
+    },
+
+    // Allow .vue files to be used
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    // Enable type checking of .vue files
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    // Add "vue" and "vite/client" types for better development tooling
+    "types": ["vue", "vite/client", "yup", "element-plus/global"],
+
+    "lib": ["ES2020", "DOM", "DOM.Iterable"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "@/*"],
+  "exclude": ["node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
